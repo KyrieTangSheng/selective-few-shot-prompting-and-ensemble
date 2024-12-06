@@ -15,15 +15,15 @@ def main():
             selector_params={},
             template_name="zeroshot",
             llm_temperature=0.0,
-            test_size=100
+            test_size=-1
         ),
         ExperimentConfig(
             name="fewshot_fewshot",
             selector_strategy="fewshot",
-            selector_params={},  # Use 3 examples for few-shot
+            selector_params={},  
             template_name="fewshot",
             llm_temperature=0.0,
-            test_size=100
+            test_size=-1
         )
     ]
     # Basic strategy configurations
@@ -34,7 +34,7 @@ def main():
             selector_params={},
             template_name="basic",
             llm_temperature=0.0,
-            test_size=100  # Start with 100 examples
+            test_size=-1
         ),
         ExperimentConfig(
             name="similarity_basic",
@@ -42,7 +42,7 @@ def main():
             selector_params={},
             template_name="basic",
             llm_temperature=0.0,
-            test_size=100  # Start with 100 examples
+            test_size=-1
         ),
         ExperimentConfig(
             name="hybrid_basic",
@@ -50,7 +50,7 @@ def main():
             selector_params={'diversity_weight': 0.3},
             template_name="basic",
             llm_temperature=0.1,
-            test_size=100
+            test_size=-1
         ),
     ]
     
