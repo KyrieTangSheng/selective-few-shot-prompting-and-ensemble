@@ -129,7 +129,7 @@ class ExperimentRunner:
         with open(exp_dir / "results.json", "w") as f:
             json.dump(results, f)
     
-    def run_ensemble_strategy(self, configs: List[ExperimentConfig], test_size: int = 100):
+    def run_ensemble_strategy(self, configs: List[ExperimentConfig], test_size: int = -1):
         logging.info(f"Starting ensemble experiment with {len(configs)} members")
         encoder, vector_store, train_df, test_df = self._setup_base_components()
 

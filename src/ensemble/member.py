@@ -37,7 +37,7 @@ class EnsembleMember:
         true_label: Optional[int] = None
     ) -> MemberPrediction:
         """Make prediction for a single review."""
-        selection_results = self.selector.select(search_results, k=3)
+        selection_results = self.selector.select(search_results, k=5)
         
         template_name = self.name.split('_')[1]
         

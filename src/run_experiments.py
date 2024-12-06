@@ -49,7 +49,7 @@ def main():
             selector_strategy="hybrid", 
             selector_params={'diversity_weight': 0.3},
             template_name="basic",
-            llm_temperature=0.1,
+            llm_temperature=0.0,
             test_size=-1
         ),
     ]
@@ -74,7 +74,7 @@ def main():
     print("\n=== Running Ensemble Experiment ===")
     ensemble_results = runner.run_ensemble_strategy(
         configs=configs,
-        test_size=100
+        test_size=-1
     )
     print("\nEnsemble Results:")
     print(f"Accuracy: {ensemble_results['metrics']['accuracy']:.3f}")
