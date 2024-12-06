@@ -1,6 +1,8 @@
 # Run experiments
 chmod +x script.sh
+
 replace ./src/run_experiments.py line 16 with your own API key
+
 ./script.sh
 
 
